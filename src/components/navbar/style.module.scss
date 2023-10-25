@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  .left,
+  .right {
+    .itemsWrap {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        p {
+          font-size: 0.8rem;
+        }
+
+        .phoneNumbers {
+          display: flex;
+          flex-direction: column;
+          a {
+            text-decoration: none;
+            color: #5a5a5a;
+          }
+        }
+
+        .child {
+          border-radius: 30px;
+          background-color: #fff;
+          padding: 10px 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          p {
+            font-size: 0.9rem;
+            color: #0d4c93;
+          }
+        }
+
+        .imgWrap {
+          display: flex;
+          align-items: center;
+          background-color: #fff;
+          justify-content: center;
+          padding: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

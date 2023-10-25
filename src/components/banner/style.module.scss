@@ -1,0 +1,37 @@
+.wrapper {
+  background-image: url("../../../public/bg.png"),
+    linear-gradient(rgba(243, 243, 243, 1), rgba(243, 243, 243, 1));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper {
+  width: 100%;
+  padding: 0 11%;
+  margin-top: 2.5%;
+}
+
+.sliderItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .sliderLeft {
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+
+    p {
+      width: 90%;
+      font-size: 1.1rem;
+      padding: 15px 0;
+      font-weight: 400;
+      line-height: 30px;
+    }
+  }
+
+  .sliderRight {
+    margin-top: 60px;
+  }
+}
