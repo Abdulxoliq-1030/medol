@@ -2,7 +2,13 @@
   background-image: url("../../../public/footer-bg.png"),
     linear-gradient(rgba(243, 243, 243, 1), rgba(243, 243, 243, 1));
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 30px 10%;
+
+  .mobileFooter {
+    display: none;
+  }
 
   .contentWrap {
     display: flex;
@@ -122,6 +128,103 @@
 
     a {
       color: #00c9c9;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 25px 5%;
+    margin-top: 8%;
+    .contentWrap {
+      .companyAboutDesc {
+        width: 100%;
+        margin-top: 3%;
+      }
+
+      .contacts {
+        width: 100%;
+
+        .contactsTop {
+          justify-content: space-between;
+
+          h2 {
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .aboutCompany {
+        display: none;
+      }
+    }
+
+    .creator {
+      display: none;
+    }
+  }
+
+  @media (max-width: 376px) {
+    .contentWrap {
+      display: none;
+    }
+
+    .mobileFooter {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      h4 {
+        color: #595959;
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      .contactItems {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          button {
+            padding: 14px 30px;
+          }
+
+          p {
+            font-size: 0.9rem;
+          }
+
+          .phoneNumbers {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+            a {
+              color: #5a5a5a;
+              text-decoration: none;
+              font-size: 0.9rem;
+            }
+          }
+
+          .imgWrap {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      p {
+        width: 100%;
+        color: #585858;
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 }

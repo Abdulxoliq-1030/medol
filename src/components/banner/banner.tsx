@@ -1,7 +1,7 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar } from '..';
-import NavLinks from '../nav-links/nav-links';
+import NavLinks, { buttons } from '../nav-links/nav-links';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import cls from "./style.module.scss"
@@ -9,6 +9,7 @@ import Image from 'next/image';
 import Button from '../button/button';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 interface BannerProps { }
 
@@ -45,9 +46,15 @@ const items: itemsProps[] = [
 
 const Banner: React.FC<BannerProps> = () => {
 
+    const [showSidebar, setShowSidebar] = useState(false);
+
+    const handleShowSidebar = () => {
+        setShowSidebar(!showSidebar)
+    }
+
     return (
         <div id='store' className={cls.wrapper}>
-            <Navbar />
+            <Navbar handleShowSidebar={handleShowSidebar} />
             <NavLinks />
             <Swiper
                 spaceBetween={300}
@@ -72,6 +79,17 @@ const Banner: React.FC<BannerProps> = () => {
                     </SwiperSlide>
                 ))}
             </Swiper >
+            <div style={{ left: showSidebar ? "0" : "-100%" }} onClick={handleShowSidebar} className={cls.mediaModal}>
+                <Image src="/logo.svg" alt='logo' width={220} height={80} />
+                <ul>
+                    {buttons.map(link => (
+                        <li>
+                            <Link onClick={handleShowSidebar} href={`${link.link}`}>{link.label}</Link>
+                        </li>
+                    ))}
+
+                </ul>
+            </div>
         </div >
     )
 }

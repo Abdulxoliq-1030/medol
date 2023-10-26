@@ -16,4 +16,44 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .mediaSwiper,
+  .swiper {
+    display: none;
+    background-image: url("../../../public/services-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 768px) {
+    .serviceTypes {
+      display: none;
+    }
+
+    .swiper {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding: 5%;
+      margin-top: 0%;
+    }
+  }
+
+  @media (max-width: 376px) {
+    .serviceTypes {
+      display: none;
+    }
+
+    .swiper {
+      display: none;
+    }
+
+    .mediaSwiper {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding: 7%;
+      margin-top: 0%;
+    }
+  }
 }

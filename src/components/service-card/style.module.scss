@@ -13,6 +13,10 @@
     }
   }
 
+  .mobileImage {
+    display: none;
+  }
+
   .textWrap {
     background-color: #fff;
     transform: translateY(-15px);
@@ -37,5 +41,28 @@
   button {
     width: 80%;
     transform: translateY(-40px);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    min-height: 260px;
+    padding: 20px 0;
+
+    .desktopImage {
+      display: none;
+    }
+
+    .mobileImage {
+      display: block;
+      width: 100%;
+    }
+
+    .textWrap {
+      p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 150px;
+      }
+    }
   }
 }

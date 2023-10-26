@@ -9,11 +9,18 @@
     border-radius: 30px;
   }
 
-  .swiper {
+  .swiper,
+  .tabletSwiper,
+  .mobileSwiper {
     width: 80%;
     margin: 0 auto;
     padding: 5%;
     margin-top: 3%;
+  }
+
+  .tabletSwiper,
+  .mobileSwiper {
+    display: none;
   }
 
   .links {
@@ -48,6 +55,35 @@
           color: #00c9c9;
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .swiper {
+      display: none;
+    }
+
+    .tabletSwiper {
+      display: block;
+      padding: 8% 0;
+      width: 90%;
+    }
+
+    .links {
+      display: none;
+    }
+  }
+
+  @media (max-width: 376px) {
+    .swiper,
+    .tabletSwiper {
+      display: none;
+    }
+
+    .mobileSwiper {
+      display: block;
+      padding: 15% 0;
+      width: 90%;
     }
   }
 }

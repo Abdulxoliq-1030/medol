@@ -25,6 +25,24 @@ const News: React.FC<NewsProps> = () => {
                 <SwiperSlide><NewsCard /></SwiperSlide>
                 <SwiperSlide><NewsCard /></SwiperSlide>
             </Swiper>
+            <Swiper navigation={true} spaceBetween={30}
+                slidesPerView={2} modules={[Navigation]} className={cls.tabletSwiper} >
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+            </Swiper>
+            <Swiper navigation={true} spaceBetween={20}
+                slidesPerView={1} modules={[Navigation]} className={cls.mobileSwiper} >
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+                <SwiperSlide><NewsCard /></SwiperSlide>
+            </Swiper>
             <div className={cls.links}>
                 <Link href='#'>Посмотреть все новости</Link>
                 <Link href='#'>Подписаться на новости</Link>

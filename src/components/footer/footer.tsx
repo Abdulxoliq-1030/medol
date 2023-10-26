@@ -106,9 +106,41 @@ const Footer: React.FC<FooterProps> = () => {
                     </ul>
                 </div>
             </div>
+            <div className={cls.mobileFooter}>
+                <Image src="/logo.svg" alt='logo' width={320} height={65} />
+                <h4>Контакты</h4>
+                <div className={cls.contactItems}>
+                    <div className={cls.item}>
+                        <div className={cls.imgWrap}>
+                            <Image src="/map.svg" alt='map' width={20} height={20} />
+                        </div>
+                        <p>г.Ташкент, Чиланзар <br />
+                            10 квартал, дом 3/1</p>
+                    </div>
+                    <div className={cls.item}>
+                        <div className={cls.imgWrap}>
+                            <Image src="/mail.svg" alt='mail' width={20} height={20} />
+                        </div>
+                        <p>info@medol.uz  </p>
+                    </div>
+                    <div className={cls.item}>
+                        <div className={cls.imgWrap}>
+                            <Image src="/phone.svg" alt='phone' width={20} height={20} />
+                        </div>
+                        <div className={cls.phoneNumbers}>
+                            <Link href="tel: +998 71 276-62-53">+998 71 276-62-53</Link>
+                            <Link href="tel: +998 71 276-62-54">+998 71 276-62-54</Link>
+                        </div>
+                    </div>
+                    <div className={cls.item}>
+                        <Button label='Оставить заявку' />
+                    </div>
+                    <p>Наша цель – построить прозрачный, долгосрочный бизнес, приносить огромную пользу населению, путем решения глобальных вопросов. Внедряя инновационные технологии на рынок Узбекистана.</p>
+                </div>
+            </div>
             <div className={cls.footerBottom}>
                 <span>© 2021 ООО «Medical Online Services»</span>
-                <span>Сайт разработан компанией www<Link href="/#">.uz</Link></span>
+                <span className={cls.creator}>Сайт разработан компанией www<Link href="/#">.uz</Link></span>
             </div>
         </div>
     )

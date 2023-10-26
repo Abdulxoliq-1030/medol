@@ -26,4 +26,8 @@
       background-color: #00c9c9;
     }
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }

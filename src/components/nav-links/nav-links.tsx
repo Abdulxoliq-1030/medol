@@ -13,7 +13,7 @@ interface btnProps {
     link: string;
 }
 
-const buttons: btnProps[] = [
+export const buttons: btnProps[] = [
     {
         label: "МАГАЗИН",
         link: "#store"

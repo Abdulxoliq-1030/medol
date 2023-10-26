@@ -14,7 +14,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ imgUrl, title, description })
     return (
         <div className={cls.wrapper}>
             <div className={cls.imageWrap}>
-                <Image src={`${imgUrl}`} alt='service-image' width={340} height={220} />
+                <Image className={cls.desktopImage} src={`${imgUrl}`} alt='service-image' width={340} height={220} />
+                <img className={cls.mobileImage} src={`${imgUrl}`} alt='service-image' />
             </div>
             <div className={cls.textWrap}>
                 <span>{title}</span>

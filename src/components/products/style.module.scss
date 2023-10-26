@@ -26,4 +26,39 @@
     margin-top: 5%;
     transition: all 0.2s linear;
   }
+
+  .swiper,
+  .mediaSwiper {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5%;
+    margin-top: 3%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    .swiper {
+      display: block;
+    }
+
+    .products {
+      display: none;
+    }
+
+    .link {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 376px) {
+    .swiper {
+      display: none;
+    }
+
+    .mediaSwiper {
+      display: block;
+    }
+  }
 }

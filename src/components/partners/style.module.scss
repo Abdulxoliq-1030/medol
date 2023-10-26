@@ -5,7 +5,9 @@
   flex-direction: column;
   margin-top: 5%;
 
-  .swiper {
+  .swiper,
+  .tabletSwiper,
+  .mobileSwiper {
     width: 80%;
     margin: 0 auto;
     padding: 5%;
@@ -23,6 +25,47 @@
         border: 1px solid #ececec;
         border-radius: 30px;
         user-select: none;
+      }
+    }
+  }
+
+  .tabletSwiper,
+  .mobileSwiper {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+
+    .swiper {
+      display: none;
+    }
+
+    .tabletSwiper {
+      display: block;
+      padding: 0 9%;
+      width: 90%;
+      margin-top: 3%;
+
+      .swiperItem {
+        gap: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 376px) {
+    .tabletSwiper {
+      display: none;
+    }
+
+    .mobileSwiper {
+      display: block;
+      padding: 0 9%;
+      width: 100%;
+      margin-top: 3%;
+
+      .swiperItem {
+        margin-bottom: 50px;
       }
     }
   }
