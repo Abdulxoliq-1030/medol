@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  padding: 60px 0;
+
+  .imageWrap {
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .textWrap {
+    background-color: #fff;
+    transform: translateY(-15px);
+    padding: 30px 25px;
+    padding-bottom: 40px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0px 2px 6px 0px #0000000d;
+
+    span {
+      color: #0d4c93;
+      font-size: 1.1rem;
+      display: inline-block;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 24px;
+      margin-top: 2%;
+    }
+  }
+
+  button {
+    width: 80%;
+    transform: translateY(-40px);
+  }
+}

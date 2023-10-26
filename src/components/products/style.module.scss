@@ -1,6 +1,28 @@
 .wrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   margin-top: 3.5%;
+  width: 80%;
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 15px;
+    margin-top: 5%;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #0d4c93;
+    font-size: 1.1rem;
+    margin-top: 5%;
+  }
 }

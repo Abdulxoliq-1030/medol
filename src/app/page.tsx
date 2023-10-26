@@ -1,4 +1,4 @@
-import { Banner, Products } from '@/components';
+import { Banner, Products, Services } from '@/components';
 import React from 'react';
 
 interface PageProps { }
@@ -8,6 +8,7 @@ const Page: React.FC<PageProps> = () => {
     <>
       <Banner />
       <Products />
+      <Services />
     </>
   )
 }

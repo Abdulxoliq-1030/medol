@@ -33,5 +33,10 @@
 
   .sliderRight {
     margin-top: 60px;
+    width: 50%;
+
+    img {
+      object-fit: contain;
+    }
   }
 }

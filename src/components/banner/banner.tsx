@@ -36,12 +36,6 @@ const items: itemsProps[] = [
         imgUrl: "/slide-2.png"
     },
     {
-        title: "Глюкометр для",
-        subText: "ABL800 FLEX",
-        description: "Ориентированный на среднюю или высокую производительность тестов, анализатор ABL800 FLEX измеряет полный набор параметров, включая pH, газы крови, электролиты, метаболиты и показатели оксиметрии",
-        imgUrl: "/slide-3.png"
-    },
-    {
         title: "Система для",
         subText: "аутогемотрансфузии",
         description: "Ориентированный на среднюю или высокую производительность тестов, анализатор ABL800 FLEX измеряет полный набор параметров, включая pH, газы крови, электролиты, метаболиты и показатели оксиметрии",
@@ -63,7 +57,7 @@ const Banner: React.FC<BannerProps> = () => {
                 onSwiper={(swiper) => console.log(swiper)}
                 pagination={true} modules={[Pagination]}
             >
-                {items.map(item => (
+                {items.map((item, idx) => (
                     <SwiperSlide>
                         <div className={cls.sliderItem}>
                             <div className={cls.sliderLeft}>
@@ -72,7 +66,7 @@ const Banner: React.FC<BannerProps> = () => {
                                 <Button label='Подробнее' />
                             </div>
                             <div className={cls.sliderRight}>
-                                <Image src={`${item.imgUrl}`} alt='slide-1' width={500} height={450} />
+                                <Image src={`${item.imgUrl}`} alt={`slide-${idx}`} width={520} height={400} />
                             </div>
                         </div>
                     </SwiperSlide>
