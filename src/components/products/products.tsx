@@ -37,7 +37,7 @@ const items: CardProps[] = [
 
 const Products: React.FC<ProductsProps> = () => {
     return (
-        <div className={cls.wrapper}>
+        <div id='products' className={cls.wrapper}>
             <Title label='ПРОДУКЦИЯ' />
             <div className={cls.products}>
                 {

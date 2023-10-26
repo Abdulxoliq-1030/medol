@@ -46,7 +46,7 @@ const items: itemsProps[] = [
 const Banner: React.FC<BannerProps> = () => {
 
     return (
-        <div className={cls.wrapper}>
+        <div id='store' className={cls.wrapper}>
             <Navbar />
             <NavLinks />
             <Swiper

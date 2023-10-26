@@ -27,7 +27,7 @@ const serviceItems: ServiceCardProps[] = [
 const Services: React.FC<ServicesProps> = () => {
 
     return (
-        <div className={cls.wrapper}>
+        <div id='service' className={cls.wrapper}>
             <Title label='УСЛУГИ' />
             <div className={cls.serviceTypes}>
                 {serviceItems.map((item) => (

@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+
+  .swiper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5%;
+
+    .swiperItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px;
+
+      img {
+        object-fit: contain;
+        padding: 10px;
+        border: 1px solid #ececec;
+        border-radius: 30px;
+        user-select: none;
+      }
+    }
+  }
+}

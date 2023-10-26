@@ -1,0 +1,127 @@
+.wrapper {
+  background-image: url("../../../public/footer-bg.png"),
+    linear-gradient(rgba(243, 243, 243, 1), rgba(243, 243, 243, 1));
+  background-position: center center;
+  padding: 30px 10%;
+
+  .contentWrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+    .companyAboutDesc {
+      width: 97%;
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      margin-top: 6%;
+      p {
+        width: 100%;
+        color: #585858;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .contacts {
+    width: 50%;
+    .contactsTop {
+      display: flex;
+      align-items: flex-start;
+      gap: 35px;
+
+      h2 {
+        font-weight: 500;
+        color: #595959;
+      }
+
+      .contactItems {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          button {
+            padding: 14px 30px;
+          }
+
+          p {
+            font-size: 0.9rem;
+          }
+
+          .phoneNumbers {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+            a {
+              color: #5a5a5a;
+              text-decoration: none;
+              font-size: 0.9rem;
+            }
+          }
+
+          .imgWrap {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .aboutCompany {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    .links {
+      .linkTitle {
+        font-size: 1.3rem;
+        color: #595959;
+        padding-bottom: 5px;
+      }
+
+      li {
+        list-style: none;
+        line-height: 28px;
+
+        a {
+          text-decoration: none;
+          color: #595959;
+          transition: all 0.2s linear;
+          font-size: 16px;
+
+          &:hover {
+            color: #00c9c9;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+
+    span {
+      color: #353535;
+      font-size: 1rem;
+    }
+
+    a {
+      color: #00c9c9;
+    }
+  }
+}
