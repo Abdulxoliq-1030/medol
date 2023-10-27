@@ -8,10 +8,15 @@ import { Modal, Input } from 'antd';
 
 interface FooterProps { }
 
+const { TextArea } = Input;
+
+
 const Footer: React.FC<FooterProps> = () => {
     const [inputValue, setInputValue] = useState({
         name: "",
-        phone: ""
+        phone: "",
+        theme: "",
+        message: ""
     })
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -30,10 +35,13 @@ const Footer: React.FC<FooterProps> = () => {
 
     return (
         <div id='connect' className={cls.wrapper}>
-            <Modal title="Информатция" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                <div style={{ display: "flex", flexDirection: "column", gap: 15 }} >
-                    <Input onChange={(e) => setInputValue({ ...inputValue, name: e.target.value })} placeholder="Имя..." />
-                    <Input type='number' onChange={(e) => setInputValue({ ...inputValue, phone: e.target.value })} placeholder="Телефон номер..." />
+            <Modal title="" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 15, justifyContent: "center", alignItems: "center" }} >
+                    <h2>Оставьте заявку</h2>
+                    <Input onChange={(e) => setInputValue({ ...inputValue, name: e.target.value })} placeholder="ФИО..." />
+                    <Input type='number' onChange={(e) => setInputValue({ ...inputValue, phone: e.target.value })} placeholder="Номер телефона" />
+                    <Input onChange={(e) => setInputValue({ ...inputValue, theme: e.target.value })} placeholder="Тема обращения" />
+                    <TextArea onChange={(e) => setInputValue({ ...inputValue, message: e.target.value })} rows={4} placeholder="Сообщение" maxLength={6} />
                 </div>
             </Modal>
             <div className={cls.contentWrap}>
