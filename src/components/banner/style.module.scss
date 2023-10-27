@@ -1,7 +1,7 @@
 .wrapper {
   background-image: url("../../../public/bg.png"),
     linear-gradient(rgba(243, 243, 243, 1), rgba(243, 243, 243, 1));
-  height: 95vh;
+  height: 700px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -42,6 +42,10 @@
       }
     }
   }
+
+  @media (max-width: 991px) {
+    height: max-content;
+  }
 }
 
 .swiper {
@@ -49,7 +53,7 @@
   padding: 0 11%;
   margin-top: 2.5%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     padding: 0 4%;
   }
 }
@@ -83,7 +87,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     .sliderLeft {
       width: 100%;
       margin-top: 5%;
@@ -106,7 +110,7 @@
     }
   }
 
-  @media (max-width: 376px) {
+  @media (max-width: 576px) {
     .sliderLeft {
       width: 100%;
       margin-top: 5%;

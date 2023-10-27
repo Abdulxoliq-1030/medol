@@ -4,39 +4,43 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import cls from "./style.module.scss"
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 interface NavLinksProps { }
 
 
-interface btnProps {
+export interface btnProps {
     label: string;
     link: string;
 }
 
-export const buttons: btnProps[] = [
-    {
-        label: "МАГАЗИН",
-        link: "#store"
-    },
-    {
-        label: "О КОМПАНИИ",
-        link: "#company"
-    }, {
-        label: "ПРОДУКЦИЯ",
-        link: "#products"
-    }, {
-        label: "УСЛУГИ",
-        link: "#service"
-    }, {
-        label: "АКЦИИ И НОВОСТИ",
-        link: "#news"
-    }, {
-        label: "ОБРАТНАЯ СВЯЗЬ",
-        link: "#connect"
-    },
-]
+
 
 const NavLinks: React.FC<NavLinksProps> = () => {
+    const { t } = useTranslation()
+
+    const buttons: btnProps[] = [
+        {
+            label: t("store"),
+            link: "#store"
+        },
+        {
+            label: t("company"),
+            link: "#company"
+        }, {
+            label: t("products"),
+            link: "#products"
+        }, {
+            label: t("services"),
+            link: "#service"
+        }, {
+            label: t("news"),
+            link: "#news"
+        }, {
+            label: t("connect"),
+            link: "#connect"
+        },
+    ]
 
     const [selected, setSelected] = useState(0);
 

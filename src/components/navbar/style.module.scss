@@ -81,7 +81,7 @@
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     width: 95%;
     .left,
     .right {
@@ -101,7 +101,7 @@
     }
   }
 
-  @media (max-width: 376px) {
+  @media (max-width: 576px) {
     .center {
       .desktopLogo {
         display: none;

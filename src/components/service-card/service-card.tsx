@@ -1,7 +1,9 @@
+"use client"
 import React from 'react';
 import cls from "./style.module.scss"
 import Image from 'next/image';
 import Button from '../button/button';
+import { useTranslation } from 'react-i18next';
 
 export interface ServiceCardProps {
     imgUrl: string;
@@ -10,7 +12,7 @@ export interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ imgUrl, title, description }) => {
-
+    const { t } = useTranslation()
     return (
         <div className={cls.wrapper}>
             <div className={cls.imageWrap}>
@@ -21,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ imgUrl, title, description })
                 <span>{title}</span>
                 <p>{description}</p>
             </div>
-            <Button label='Подробнее' />
+            <Button label={t("detail")} />
         </div>
     )
 

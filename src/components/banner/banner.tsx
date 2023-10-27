@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Navbar } from '..';
-import NavLinks, { buttons } from '../nav-links/nav-links';
+import NavLinks, { btnProps } from '../nav-links/nav-links';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import cls from "./style.module.scss"
@@ -10,9 +10,33 @@ import Button from '../button/button';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 interface BannerProps { }
 
+
+const buttons: btnProps[] = [
+    {
+        label: "МАГАЗИН",
+        link: "#store"
+    },
+    {
+        label: "О КОМПАНИИ",
+        link: "#company"
+    }, {
+        label: "ПРОДУКЦИЯ",
+        link: "#products"
+    }, {
+        label: "УСЛУГИ",
+        link: "#service"
+    }, {
+        label: "АКЦИИ И НОВОСТИ",
+        link: "#news"
+    }, {
+        label: "ОБРАТНАЯ СВЯЗЬ",
+        link: "#connect"
+    },
+]
 
 
 interface itemsProps {
@@ -23,30 +47,35 @@ interface itemsProps {
 }
 
 
-const items: itemsProps[] = [
-    {
-        title: "Анализатор",
-        subText: "ABL800 FLEX",
-        description: "Ориентированный на среднюю или высокую производительность тестов, анализатор ABL800 FLEX измеряет полный набор параметров, включая pH, газы крови, электролиты, метаболиты и показатели оксиметрии",
-        imgUrl: "/slide-1.png"
-    },
-    {
-        title: "Аппарат ИК-лазерный",
-        subText: "МАКДЭЛ-09.1",
-        description: "Ориентированный на среднюю или высокую производительность тестов, анализатор ABL800 FLEX измеряет полный набор параметров, включая pH, газы крови, электролиты, метаболиты и показатели оксиметрии",
-        imgUrl: "/slide-2.png"
-    },
-    {
-        title: "Система для",
-        subText: "аутогемотрансфузии",
-        description: "Ориентированный на среднюю или высокую производительность тестов, анализатор ABL800 FLEX измеряет полный набор параметров, включая pH, газы крови, электролиты, метаболиты и показатели оксиметрии",
-        imgUrl: "/slide-4.png"
-    },
-]
 
 const Banner: React.FC<BannerProps> = () => {
 
     const [showSidebar, setShowSidebar] = useState(false);
+    const { t } = useTranslation();
+
+
+    const items: itemsProps[] = [
+        {
+            title: t("analize"),
+            subText: "ABL800 FLEX",
+            description: t("bannerText"),
+            imgUrl: "/slide-1.png"
+        },
+        {
+            title: t("lazerName"),
+            subText: "МАКДЭЛ-09.1",
+            description: t("bannerText"),
+            imgUrl: "/slide-2.png"
+        },
+        {
+            title: t("forSystem"),
+            subText: t("autogemotransfuzii"),
+            description: t("bannerText"),
+            imgUrl: "/slide-4.png"
+        },
+    ]
+
+
 
     const handleShowSidebar = () => {
         setShowSidebar(!showSidebar)
@@ -70,7 +99,7 @@ const Banner: React.FC<BannerProps> = () => {
                             <div className={cls.sliderLeft}>
                                 <h1>{item.title} <br /> {item.subText}</h1>
                                 <p>{item.description}</p>
-                                <Button label='Подробнее' />
+                                <Button label={t("detail")} />
                             </div>
                             <div className={cls.sliderRight}>
                                 <Image src={`${item.imgUrl}`} alt={`slide-${idx}`} width={520} height={400} />

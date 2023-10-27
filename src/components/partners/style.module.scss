@@ -34,7 +34,7 @@
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     margin-top: 0;
 
     .swiper {
@@ -53,7 +53,7 @@
     }
   }
 
-  @media (max-width: 376px) {
+  @media (max-width: 576px) {
     .tabletSwiper {
       display: none;
     }

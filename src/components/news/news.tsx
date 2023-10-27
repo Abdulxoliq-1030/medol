@@ -10,12 +10,14 @@ interface NewsProps { }
 
 import { Navigation } from 'swiper/modules';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 const News: React.FC<NewsProps> = () => {
+    const { t } = useTranslation()
 
     return (
         <div id='news' className={cls.wrapper}>
-            <Title label='НОВОСТИ' />
+            <Title label={t("news")} />
             <Swiper navigation={true} spaceBetween={80}
                 slidesPerView={3} modules={[Navigation]} className={cls.swiper} >
                 <SwiperSlide><NewsCard /></SwiperSlide>
@@ -44,8 +46,8 @@ const News: React.FC<NewsProps> = () => {
                 <SwiperSlide><NewsCard /></SwiperSlide>
             </Swiper>
             <div className={cls.links}>
-                <Link href='#'>Посмотреть все новости</Link>
-                <Link href='#'>Подписаться на новости</Link>
+                <Link href='#'>{t("showAllNews")}</Link>
+                <Link href='#'>{t("followNews")}</Link>
             </div>
         </div>
     )

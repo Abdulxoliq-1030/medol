@@ -8,6 +8,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { Title } from '..';
 import cls from "./style.module.scss"
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 interface PartnersProps { }
 
@@ -64,10 +65,12 @@ const items = [
 
 const Partners: React.FC<PartnersProps> = () => {
 
+    const { t } = useTranslation()
+
 
     return (
         <div id='partners' className={cls.wrapper}>
-            <Title label='ПАРТНЕРЫ' />
+            <Title label={t("partners")} />
             <Swiper navigation={true} spaceBetween={120}
                 slidesPerView={3} modules={[Navigation]} className={cls.swiper} >
                 {items.map(item => (

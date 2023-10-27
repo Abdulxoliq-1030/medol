@@ -58,7 +58,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     .swiper {
       display: none;
     }
@@ -74,7 +74,7 @@
     }
   }
 
-  @media (max-width: 376px) {
+  @media (max-width: 576px) {
     .swiper,
     .tabletSwiper {
       display: none;

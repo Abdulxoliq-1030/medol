@@ -36,7 +36,7 @@
     margin-top: 3%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     width: 100%;
 
     .swiper {
@@ -52,7 +52,7 @@
     }
   }
 
-  @media (max-width: 376px) {
+  @media (max-width: 576px) {
     .swiper {
       display: none;
     }

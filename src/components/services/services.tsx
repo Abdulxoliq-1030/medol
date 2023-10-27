@@ -7,36 +7,42 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 import { Pagination } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 
 interface ServicesProps { }
 
 
-const serviceItems: ServiceCardProps[] = [
-    {
-        imgUrl: "/service-1.png",
-        title: "УСЛУГИ ЛОГИСТИКИ",
-        description: "Компания предоставляет сервисное обслуживание по всем предоставляемым продуктам. У наших инженеров имеется опыт и сертификаты фирм производителей......"
-    },
-    {
-        imgUrl: "/service-2.png",
-        title: "РЕГИСТРАЦИИ",
-        description: "Компания предоставляет сервисное обслуживание по всем предоставляемым продуктам. У наших инженеров имеется опыт и сертификаты фирм производителей......"
-    },
-    {
-        imgUrl: "/service-3.png",
-        title: "УСЛУГИ ЛОГИСТИКИ",
-        description: "Компания предоставляет сервисное обслуживание по всем предоставляемым продуктам. У наших инженеров имеется опыт и сертификаты фирм производителей......"
-    },
-]
+
 
 const Services: React.FC<ServicesProps> = () => {
+    const { t } = useTranslation()
+
+    const serviceItems: ServiceCardProps[] = [
+        {
+            imgUrl: "/service-1.png",
+            title: t("logistic"),
+            description: t("serviceDesc")
+        },
+        {
+            imgUrl: "/service-2.png",
+            title: t("registration"),
+            description: t("serviceDesc")
+        },
+        {
+            imgUrl: "/service-3.png",
+            title: t("logistic"),
+            description: t("serviceDesc")
+        },
+    ]
 
     return (
         <div id='service' className={cls.wrapper}>
-            <Title label='УСЛУГИ' />
+            <Title label={t("services")} />
             <div className={cls.serviceTypes}>
-                {serviceItems.map((item) => (
-                    <ServiceCard {...item} />
+                {serviceItems.map((item, idx) => (
+                    <React.Fragment key={idx}>
+                        <ServiceCard {...item} />
+                    </React.Fragment>
                 ))}
             </div>
 
@@ -47,9 +53,11 @@ const Services: React.FC<ServicesProps> = () => {
                 pagination={true} modules={[Pagination]}
             >
                 {serviceItems.map((item, idx) => (
-                    <SwiperSlide>
-                        <ServiceCard {...item} />
-                    </SwiperSlide>
+                    <React.Fragment key={idx}>
+                        <SwiperSlide>
+                            <ServiceCard {...item} />
+                        </SwiperSlide>
+                    </React.Fragment>
                 ))}
             </Swiper>
 
@@ -59,9 +67,11 @@ const Services: React.FC<ServicesProps> = () => {
                 className={cls.mediaSwiper}
             >
                 {serviceItems.map((item, idx) => (
-                    <SwiperSlide>
-                        <ServiceCard {...item} />
-                    </SwiperSlide>
+                    <React.Fragment key={idx}>
+                        <SwiperSlide>
+                            <ServiceCard {...item} />
+                        </SwiperSlide>
+                    </React.Fragment>
                 ))}
             </Swiper >
 
