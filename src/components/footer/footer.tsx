@@ -1,14 +1,41 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import cls from "./style.module.scss"
 import Image from 'next/image';
 import Button from '../button/button';
 import Link from 'next/link';
+import { Modal, Input } from 'antd';
 
 interface FooterProps { }
 
 const Footer: React.FC<FooterProps> = () => {
+    const [inputValue, setInputValue] = useState({
+        name: "",
+        phone: ""
+    })
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div id='connect' className={cls.wrapper}>
+            <Modal title="Информатция" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 15 }} >
+                    <Input onChange={(e) => setInputValue({ ...inputValue, name: e.target.value })} placeholder="Имя..." />
+                    <Input type='number' onChange={(e) => setInputValue({ ...inputValue, phone: e.target.value })} placeholder="Телефон номер..." />
+                </div>
+            </Modal>
             <div className={cls.contentWrap}>
                 <div className={cls.contacts}>
                     <div className={cls.contactsTop}>
@@ -39,7 +66,7 @@ const Footer: React.FC<FooterProps> = () => {
                                 </div>
                             </div>
                             <div className={cls.item}>
-                                <Button label='Оставить заявку' />
+                                <Button onclick={showModal} label='Оставить заявку' />
                             </div>
                         </div>
                     </div>

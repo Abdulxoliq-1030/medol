@@ -1,5 +1,6 @@
-import { Banner, Company, Footer, News, Partners, Products, Services } from '@/components';
+"use client"
 import React from 'react';
+import { Banner, Company, Footer, News, Partners, Products, Services } from '@/components';
 
 interface PageProps { }
 

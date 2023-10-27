@@ -31,7 +31,7 @@ export const translationsUz = {
     newsAbout: "19-21 aprel kunlari “RSNPMCU” AJda (Respublika ixtisoslashtirilgan urologiya ilmiy-amaliy tibbiyot markazi) Ethicon Endo Surgery (Johnson&Johnson) va yakka tartibdagi tadbirkor “Medical Online Services” MChJ koʻmagida mahorat darsi boʻlib oʻtdi...",
     showAllNews: "Barcha yangiliklarni ko'rish",
     followNews: "Yangiliklarga obuna bo'ling",
-    partners: "Hamkorlar"
+    partners: "Hamkorlar",
 };
 
 export const translationsRu = {
