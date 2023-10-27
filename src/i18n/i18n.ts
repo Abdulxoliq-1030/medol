@@ -32,6 +32,7 @@ export const translationsUz = {
     showAllNews: "Barcha yangiliklarni ko'rish",
     followNews: "Yangiliklarga obuna bo'ling",
     partners: "Hamkorlar",
+    dialogText: "Siz bilan tez orada aloqaga chiqammiz!"
 };
 
 export const translationsRu = {
@@ -67,5 +68,6 @@ export const translationsRu = {
     newsAbout: "С 19 по 21 апреля в АО «РСНПМЦУ» (Республиканский Специализированный Научно-Практический Медицинский Центр Урологии) при поддержке компаний Ethicon Endo Surgery (Johnson&Johnson) и ИП ООО «Medical Online Services» был проведен мастер-класс в исполнении...",
     showAllNews: "Посмотреть все новости",
     followNews: "Подписаться на новости",
-    partners: "ПАРТНЕРЫ"
+    partners: "ПАРТНЕРЫ",
+    dialogText: "Мы свяжемся с вами в ближайшее время!"
 };

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Button from '../button/button';
 import Link from 'next/link';
 import { Modal, Input } from 'antd';
+import Swal from "sweetalert2";
+import { useTranslation } from 'react-i18next';
 
 interface FooterProps { }
 
@@ -12,6 +14,10 @@ const { TextArea } = Input;
 
 
 const Footer: React.FC<FooterProps> = () => {
+
+    const { t } = useTranslation()
+
+
     const [inputValue, setInputValue] = useState({
         name: "",
         phone: "",
@@ -27,11 +33,28 @@ const Footer: React.FC<FooterProps> = () => {
 
     const handleOk = () => {
         setIsModalOpen(false);
+        sendMessage()
     };
 
     const handleCancel = () => {
         setIsModalOpen(false);
     };
+
+    function sendMessage() {
+        try {
+            Swal.fire({
+                title: t("dialogText"),
+                icon: "success"
+            });
+            setInputValue({ ...inputValue, name: "", phone: "" });
+        } catch (err) {
+            Swal.fire({
+                icon: "error",
+                title: "Ошибка...",
+                text: "Попробуйте еще раз.",
+            });
+        }
+    }
 
     return (
         <div id='connect' className={cls.wrapper}>
